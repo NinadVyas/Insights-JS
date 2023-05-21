@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    background-color: black;
+}
+
+.main {
+    filter: blur(0px);
+    z-index: -1;
+    height: 300px;
+    position: absolute;
+    width: 500px;
+    background: url('https://free4kwallpapers.com/uploads/originals/2016/07/04/mcu-spider-man-wallpaper.jpg') no-repeat center center/cover;
+}
+
+#text {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 28px;
+}
