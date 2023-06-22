@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid ;
+    border-radius: 50px;
+    border-color: rgb(255, 255, 255);
+    padding: .5rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search::placeholder {
+    color: #ffffff;
+}
+
+.search:focus {
+    background-color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+}
+
+.movie-info span.green {
+    color: green;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    background: #fff;
+    padding: 2rem;
+    max-height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.overview h3 {
+    margin-bottom: 20px;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.loadData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#next,
+#prev {
+    font-size: 16px;
+    padding: 5px 8px;
+    width: 120px;
+    border-radius: 5px;
+    margin: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#prev:disabled {
+    cursor: not-allowed;
+    background: #f2f2f2 !important;
+    color: #000 !important;
+}
